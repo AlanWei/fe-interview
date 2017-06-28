@@ -1,39 +1,26 @@
 # Front-End Interview
 ## Algorithm
-1. Reverse Integer
+1. Two Sum
 
 e.g.
-`Given 123, return 321`
-
-e.g.
-`Given -123, return -321`
-
-If the return integer is larger than 32-bit signed integer, return 0.
-
-e.g.
-`Given 1534236469, return 0`
+Given `[2, 7, 11, 15]`, target is `9`, should return `[0, 1]`.
 
 Answer:
 ```
-var reverse = function(x) {
-    const temp = x.toString().split('');
-    let isNegative = false;
-    let ro = '';
-    const MAX = Math.pow(2, 31);
-    temp.map((t) => {
-      if (t === '-') {
-        isNegative = true;
-      } else {
-        ro = `${t}${ro}`;
+function equal(first, second, target) {
+  return first + second === target;
+}
+
+var twoSum = function(nums, target) {
+  const length = nums.length;
+  for (let i=0; i<length; i++) {
+    const remain = length - i;
+    for (let j=1; j<remain; j++) {
+      if (equal(nums[i], nums[i+j], target)) {
+        return [i, i+j];
       }
-    });
-    if (ro > MAX) {
-      return 0;
     }
-    if (isNegative) {
-      ro = -ro;
-    }
-    return parseInt(ro);
+  }
 };
 ```
 
