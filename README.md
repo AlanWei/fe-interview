@@ -32,6 +32,7 @@ e.g.
 
 ```
 [1, 2, 3, 4, 5]
+isBadVersion(2) === false;
 isBadVersion(3) === true;
 return 3
 ```
