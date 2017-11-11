@@ -251,5 +251,5 @@ Answer:
 2. How to segregate backend and frontend with less pains?
 
 Answer:
-* Add a better BFF (backend for frontend) driven middleware layer, mainly in nodejs, to speed up product development
-* Middleware can do routing, caching, intl, customization
+* Add a better BFF (backend for frontend) driven middleware layer, mainly in nodejs, to speed up product development.
+* Middleware can do routing, caching, intl, customization.
